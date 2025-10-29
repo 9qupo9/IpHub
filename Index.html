@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                height: 100vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+        }
+
+        .circle-animation {
+            animation: pulse-glow 4s ease-in-out infinite alternate;
+        }
+
+        .circle-animation:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .circle-animation:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .circle-animation:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .circle-animation:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        .circle-animation:nth-child(5) {
+            animation-delay: 2s;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        .circle {
+            border-color: white !important;
+        }
+
+        .radial-gradient-bg {
+            background: #0C0A13;
+        }
+
+        .image-circle {
+            background: url('media/fon.png') center/cover no-repeat;
+            border-radius: 50%;
+        }
+
+        .planet-orbit {
+            position: absolute;
+            border-radius: 50%;
+            animation: orbit linear infinite;
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            animation: counter-rotate linear infinite;
+        }
+
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes counter-rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .icon-dot {
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .icon-ring {
+            width: 12px;
+            height: 12px;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        .icon-square {
+            width: 8px;
+            height: 8px;
+            background: white;
+            transform: rotate(45deg);
+        }
+
+        .icon-line {
+            width: 12px;
+            height: 4px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        /* Header styles for maximum z-index */
+        #header-root {
+            z-index: 999998 !important;
+        }
+
+        #header-root > div {
+            z-index: 999998 !important;
+        }
+
+        /* Modal styles for maximum z-index */
+        #info-modal {
+            z-index: 999999 !important;
+        }
+
+        #info-modal .modal-content {
+            z-index: 1000000 !important;
+        }
+
+        /* Ensure modal backdrop covers everything */
+        #info-modal::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999998;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <div id="header-root"></div>
+
+    <section class="h-screen radial-gradient-bg flex items-center justify-center relative overflow-hidden px-4 pt-32">
+
+
+        <div class="absolute top-16 sm:top-24 left-1/2 transform -translate-x-1/2 text-center px-4 sm:px-6 w-full max-w-md sm:max-w-2xl md:max-w-4xl mx-auto"
+            style="z-index: 1000;">
+            <h1
+                class="text-xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse tracking-tight leading-tight sm:leading-none drop-shadow-2xl mb-3">
+                Resource Hub for the Story Ecosystem
+            </h1>
+            <p class="text-base sm:text-lg md:text-lg text-gray-300 leading-relaxed opacity-90">
+                A user-friendly, structured platform that brings together all the essential resources of the ecosystem
+                in one place, making navigation simple, clear, and enjoyable for both newcomers and active participants.
+            </p>
+        </div>
+
+        <div
+            class="hidden lg:block absolute left-2 xl:left-8 top-1/2 transform -translate-y-1/2 space-y-4 xl:space-y-8 z-40">
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 w-80 border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 bg-white rounded-sm flex items-center justify-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Developer hub</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">The first step involves identifying all places where your
+                            personal information might be present.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Once you've identified where your information is held, the next
+                            step is to contact the administrators of this platform.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Removing personal information is not a one-time task but
+                            requires ongoing vigilance.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">There are professional services and tools available that
+                            specialise in personal information removal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 w-80 border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 flex items-center justify-center">
+                            <div class="w-3 h-3 border-2 border-white rounded-full"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Community hub</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">The first step involves identifying all places where your
+                            personal information might be present.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Once you've identified where your information is held, the next
+                            step is to contact the administrators of this platform.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Removing personal information is not a one-time task but
+                            requires ongoing vigilance.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">There are professional services and tools available that
+                            specialise in personal information removal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hidden lg:block absolute right-8 top-1/2 transform -translate-y-1/2 space-y-8 z-40">
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 w-80 border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 flex items-center justify-center">
+                            <div class="w-2 h-2 bg-white transform rotate-45"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Community hub</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">The first step involves identifying all places where your
+                            personal information might be present.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Once you've identified where your information is held, the next
+                            step is to contact the administrators of this platform.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Removing personal information is not a one-time task but
+                            requires ongoing vigilance.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">There are professional services and tools available that
+                            specialise in personal information removal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 w-80 border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 flex items-center justify-center">
+                            <div
+                                class="w-0 h-0 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Validator Hub</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Useful Validator Resources: Links to services and other
+                            important resources gathered in one place for efficient validator operations.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Helpful Articles: Articles on infrastructure optimization, node
+                            setup, and performance enhancement.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Monitoring Tools: Tools for monitoring node status and their
+                            performance.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Other Useful Resources: Additional resources for automation,
+                            backup, and support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="absolute inset-0 flex items-center justify-center mt-32"></div>
+
+        <div
+            class="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px] image-circle">
+        </div>
+
+        <div
+            class="absolute w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px] rounded-full border circle opacity-50 circle-animation">
+        </div>
+        <div
+            class="absolute w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] lg:w-[500px] lg:h-[500px] rounded-full border circle opacity-60 circle-animation">
+        </div>
+        <div
+            class="absolute w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] lg:w-[400px] lg:h-[400px] rounded-full border circle opacity-70 circle-animation">
+        </div>
+        <div
+            class="absolute w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[210px] md:h-[210px] lg:w-[300px] lg:h-[300px] rounded-full border circle opacity-80 circle-animation">
+        </div>
+        <div
+            class="absolute w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] md:w-[140px] md:h-[140px] lg:w-[200px] lg:h-[200px] rounded-full border circle opacity-90 circle-animation">
+        </div>
+
+        <div class="planet-orbit w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px]"
+            style="animation-duration: 20s;">
+            <div class="planet -top-3 sm:-top-4 md:-top-5 lg:-top-6 left-1/2 -ml-3 sm:-ml-4 md:-ml-5 lg:-ml-6"
+                style="animation-duration: 20s;">
+                <img src="media/planet1.svg" alt="Planet 1"
+                    class="planet-svg w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+            </div>
+        </div>
+
+        <div class="planet-orbit w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] lg:w-[500px] lg:h-[500px]"
+            style="animation-duration: 15s;">
+            <div class="planet -top-3 sm:-top-4 md:-top-5 lg:-top-6 left-1/2 -ml-3 sm:-ml-4 md:-ml-5 lg:-ml-6"
+                style="animation-duration: 15s;">
+                <img src="media/planet2.svg" alt="Planet 2"
+                    class="planet-svg w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+            </div>
+        </div>
+
+        <div class="planet-orbit w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] lg:w-[400px] lg:h-[400px]"
+            style="animation-duration: 12s;">
+            <div class="planet -top-3 sm:-top-4 md:-top-5 lg:-top-6 left-1/2 -ml-3 sm:-ml-4 md:-ml-5 lg:-ml-6"
+                style="animation-duration: 12s;">
+                <img src="media/planet3.svg" alt="Planet 3"
+                    class="planet-svg w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+            </div>
+        </div>
+
+        <div class="planet-orbit w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[210px] md:h-[210px] lg:w-[300px] lg:h-[300px]"
+            style="animation-duration: 10s;">
+            <div class="planet -top-3 sm:-top-4 md:-top-5 lg:-top-6 left-1/2 -ml-3 sm:-ml-4 md:-ml-5 lg:-ml-6"
+                style="animation-duration: 10s;">
+                <img src="media/planet4.svg" alt="Planet 4"
+                    class="planet-svg w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+            </div>
+        </div>
+
+        <div class="planet-orbit w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] md:w-[140px] md:h-[140px] lg:w-[200px] lg:h-[200px]"
+            style="animation-duration: 8s;">
+            <div class="planet -top-3 sm:-top-4 md:-top-5 lg:-top-6 left-1/2 -ml-3 sm:-ml-4 md:-ml-5 lg:-ml-6"
+                style="animation-duration: 8s;">
+                <img src="media/planet5.svg" alt="Planet 5"
+                    class="planet-svg w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12">
+            </div>
+        </div>
+
+        <div class="relative" style="z-index: 500;">
+            <img src="media/ip.svg" alt="IP Image"
+                class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 mx-auto object-contain">
+        </div>
+    </section>
+
+
+    <section class="lg:hidden radial-gradient-bg py-8 px-4">
+        <div class="max-w-sm mx-auto space-y-6">
+
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 w-full border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 bg-white rounded-sm flex items-center justify-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Developer hub</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">The first step involves identifying all places where your
+                            personal information might be present.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Once you've identified where your information is held, the next
+                            step is to contact the administrators of this platform.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Removing personal information is not a one-time task but
+                            requires ongoing vigilance.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">There are professional services and tools available that
+                            specialise in personal information removal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 w-full border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 flex items-center justify-center">
+                            <div class="w-3 h-3 border-2 border-white rounded-full"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Community hub</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">The first step involves identifying all places where your
+                            personal information might be present.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Once you've identified where your information is held, the next
+                            step is to contact the administrators of this platform.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Removing personal information is not a one-time task but
+                            requires ongoing vigilance.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">There are professional services and tools available that
+                            specialise in personal information removal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 w-full border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 flex items-center justify-center">
+                            <div class="w-2 h-2 bg-white transform rotate-45"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Community hub</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">The first step involves identifying all places where your
+                            personal information might be present.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Once you've identified where your information is held, the next
+                            step is to contact the administrators of this platform.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Removing personal information is not a one-time task but
+                            requires ongoing vigilance.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">There are professional services and tools available that
+                            specialise in personal information removal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-lg p-6 w-full border border-gray-700">
+                <div class="flex items-center mb-4">
+                    <div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center mr-3">
+                        <div class="w-4 h-4 flex items-center justify-center">
+                            <div
+                                class="w-0 h-0 border-l-[6px] border-r-[6px] border-b-[8px] border-l-transparent border-r-transparent border-b-white">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg">Validator Hub</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Useful Validator Resources: Links to services and other
+                            important resources gathered in one place for efficient validator operations.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Helpful Articles: Articles on infrastructure optimization, node
+                            setup, and performance enhancement.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Monitoring Tools: Tools for monitoring node status and their
+                            performance.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                        <p class="text-gray-300 text-sm">Other Useful Resources: Additional resources for automation,
+                            backup, and support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="Header.js"></script>
+</body>
+
+</html>

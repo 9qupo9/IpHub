@@ -1,0 +1,15 @@
+<svg width="188" height="189" viewBox="0 0 188 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="bronzeGradient" cx="0.3" cy="0.3" r="0.8">
+<stop offset="0%" stop-color="#F4A460"/>
+<stop offset="30%" stop-color="#CD853F"/>
+<stop offset="70%" stop-color="#A0522D"/>
+<stop offset="100%" stop-color="#8B4513"/>
+</radialGradient>
+<filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+<feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+</filter>
+</defs>
+<path d="M60.132 149.12C74.17 183.831 124.347 183.831 138.385 149.12C142.62 138.65 151.192 130.35 161.899 126.456C197.031 113.682 197.031 64.5723 161.899 51.7977C151.192 47.9043 142.62 39.6041 138.385 29.1336C124.347 -5.57716 74.17 -5.57717 60.132 29.1336C55.897 39.6041 47.325 47.9043 36.618 51.7977C1.486 64.5723 1.486 113.682 36.618 126.456C47.325 130.35 55.897 138.65 60.132 149.12Z" fill="url(#bronzeGradient)" filter="url(#shadow)"/>
+
+</svg>
