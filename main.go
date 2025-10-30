@@ -1,14 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 )
 
 func main() {
-	Сервер := http.FileServer(http.Dir("."))
-	http.Handle("/", Сервер)
-
-	fmt.Println("http://localhost:8080")
+	http.Handle("/", http.FileServer(http.Dir(".")))
+	http.Handle("/media/", http.StripPrefix("/media/", http.FileServer(http.Dir("media"))))
 	http.ListenAndServe(":8080", nil)
 }
