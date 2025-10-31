@@ -176,19 +176,19 @@
         }
 
         #header-root {
-            z-index: 999998 !important;
+            z-index: 3 !important;
         }
 
         #header-root>div {
-            z-index: 999998 !important;
+            z-index: 3 !important;
         }
 
         #info-modal {
-            z-index: 999999 !important;
+            z-index: 4 !important;
         }
 
         #info-modal .modal-content {
-            z-index: 1000000 !important;
+            z-index: 4 !important;
         }
 
         #info-modal::before {
@@ -199,12 +199,12 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.6);
-            z-index: 999998;
+            z-index: 0;
         }
 
         .tab-card {
             position: absolute;
-            z-index: 50;
+            z-index: 1;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
@@ -217,28 +217,28 @@
             position: absolute;
             left: calc(50% - 600px);
             top: 25%;
-            z-index: 50;
+            z-index: 1;
         }
 
         .tab2-card {
             position: absolute;
             left: calc(50% - 600px);
             top: 60%;
-            z-index: 50;
+            z-index: 1;
         }
 
         .tab3-card {
             position: absolute;
             right: calc(50% - 600px);
             top: 25%;
-            z-index: 50;
+            z-index: 1;
         }
 
         .tab4-card {
             position: absolute;
             right: calc(50% - 600px);
             top: 60%;
-            z-index: 50;
+            z-index: 1;
         }
 
         @media (max-width: 1024px) {
@@ -263,11 +263,10 @@
     </style>
 </head>
 
-<body class="radial-gradient-bg text-white"></body>
+<body class="radial-gradient-bg text-white">
+    <div id="header-root"></div>
 
-<div id="header-root"></div>
-
-<section class="h-screen radial-gradient-bg flex items-center justify-center relative overflow-hidden px-4 pt-32">
+    <section class="h-screen radial-gradient-bg flex items-center justify-center relative overflow-hidden px-4 pt-32">
 
     <div class="stars">
         <div class="star" style="top: 10%; left: 15%; width: 2px; height: 2px;"></div>
@@ -288,7 +287,7 @@
     </div>
 
     <div class="absolute top-[80px] sm:top-24 left-1/2 transform -translate-x-1/2 text-center px-4 sm:px-6 w-full max-w-md sm:max-w-2xl md:max-w-4xl mx-auto"
-        style="z-index: 1000;">
+        style="z-index: 1;">
         <h1
             class="text-xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse tracking-tight leading-tight sm:leading-none drop-shadow-2xl mb-3">
             Resource Hub for the Story Ecosystem
@@ -300,19 +299,19 @@
     </div>
 
     <div class="hidden lg:block tab1-card tab-card">
-        <img src="media/tab1.svg" alt="Tab 1" class="w-[250px] h-auto object-contain">
+        <img src="media/tab1.svg" alt="Tab 1" class="w-[300px] h-auto object-contain">
     </div>
 
     <div class="hidden lg:block tab2-card tab-card">
-        <img src="media/tab2.svg" alt="Tab 2" class="w-[250px] h-auto object-contain">
+        <img src="media/tab2.svg" alt="Tab 2" class="w-[300px] h-auto object-contain">
     </div>
 
     <div class="hidden lg:block tab3-card tab-card">
-        <img src="media/tab3.svg" alt="Tab 3" class="w-[250px] h-auto object-contain">
+        <img src="media/tab3.svg" alt="Tab 3" class="w-[300px] h-auto object-contain">
     </div>
 
     <div class="hidden lg:block tab4-card tab-card">
-        <img src="media/tab4.svg" alt="Tab 4" class="w-[250px] h-auto object-contain">
+        <img src="media/tab4.svg" alt="Tab 4" class="w-[300px] h-auto object-contain">
     </div>
 
     <div class="absolute inset-0 flex items-center justify-center mt-32"></div>
@@ -382,7 +381,7 @@
         </div>
     </div>
 
-    <div class="relative" style="z-index: 500;">
+    <div class="relative" style="z-index: 1;">
         <img src="media/ip.svg" alt="IP Image"
             class="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 mx-auto object-contain">
     </div>
@@ -402,7 +401,7 @@
         <div class="star" style="top: 85%; left: 40%; width: 1px; height: 1px;"></div>
         <div class="star" style="top: 95%; left: 60%; width: 2px; height: 2px;"></div>
     </div>
-    <div class="max-w-sm mx-auto space-y-6 relative z-10">
+    <div class="max-w-sm mx-auto space-y-6 relative z-1">
         <div class="p-4 hover:scale-105 transition-all duration-300">
             <img src="media/tab1.svg" alt="Tab 1" class="w-full h-auto object-contain">
         </div>
@@ -422,7 +421,7 @@
     </div>
 </section>
 
-<script src="Header.js"></script>
+    <script src="Header.js"></script>
 </body>
 
 </html>
