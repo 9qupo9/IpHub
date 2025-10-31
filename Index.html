@@ -207,40 +207,6 @@
             z-index: 1;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
-
-        .tab-card:hover {
-            transform: scale(1.05);
-        }
-
-
-        .tab1-card {
-            position: absolute;
-            left: calc(50% - 600px);
-            top: 25%;
-            z-index: 1;
-        }
-
-        .tab2-card {
-            position: absolute;
-            left: calc(50% - 600px);
-            top: 60%;
-            z-index: 1;
-        }
-
-        .tab3-card {
-            position: absolute;
-            right: calc(50% - 600px);
-            top: 25%;
-            z-index: 1;
-        }
-
-        .tab4-card {
-            position: absolute;
-            right: calc(50% - 600px);
-            top: 60%;
-            z-index: 1;
-        }
-
         @media (max-width: 1024px) {
 
             .tab1-card,
@@ -248,6 +214,39 @@
             .tab3-card,
             .tab4-card {
                 display: none;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .tab1-card {
+                top: 20%;
+                left: 15%;
+            }
+            .tab1-card:hover {
+                transform: scale(1.05);
+            }
+            .tab2-card {
+                top: 20%;
+                left: 15%;
+                transform: translateY(calc(100% + 15px));
+            }
+            .tab2-card:hover {
+                transform: translateY(calc(100% + 15px)) scale(1.05);
+            }
+            .tab3-card {
+                top: 20%;
+                left: calc(85% - 300px);
+            }
+            .tab3-card:hover {
+                transform: scale(1.05);
+            }
+            .tab4-card {
+                top: 20%;
+                left: calc(85% - 300px);
+                transform: translateY(calc(100% + 5px));
+            }
+            .tab4-card:hover {
+                transform: translateY(calc(100% + 5px)) scale(1.05);
             }
         }
 
