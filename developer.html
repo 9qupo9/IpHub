@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Hub - IPHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                height: 100vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+        }
+
+        .radial-gradient-bg {
+            background: #0C0A13;
+            position: relative;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        .star:nth-child(odd) {
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(3n) {
+            animation-delay: 2s;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        #header-root {
+            z-index: 3 !important;
+        }
+
+        #header-root>div {
+            z-index: 3 !important;
+        }
+
+        #info-modal {
+            z-index: 4 !important;
+        }
+
+        #info-modal .modal-content {
+            z-index: 4 !important;
+        }
+
+        #info-modal::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .developer-card {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .developer-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+        }
+
+        .gradient-border {
+            background: linear-gradient(135deg, #3B82F6, #06B6D4, #8B5CF6);
+            padding: 2px;
+            border-radius: 12px;
+        }
+
+        .gradient-border-inner {
+            background: #0C0A13;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            }
+
+            100% {
+                box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+            }
+        }
+    </style>
+</head>
+
+<body class="radial-gradient-bg text-white">
+    <div id="header-root"></div>
+
+    <div class="stars">
+        <div class="star" style="top: 10%; left: 15%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 20%; left: 80%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 30%; left: 25%; width: 1.5px; height: 1.5px;"></div>
+        <div class="star" style="top: 15%; left: 70%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 45%; left: 10%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 60%; left: 85%; width: 1.5px; height: 1.5px;"></div>
+        <div class="star" style="top: 75%; left: 20%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 85%; left: 75%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 25%; left: 45%; width: 1.5px; height: 1.5px;"></div>
+        <div class="star" style="top: 55%; left: 60%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 35%; left: 90%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 65%; left: 5%; width: 1.5px; height: 1.5px;"></div>
+        <div class="star" style="top: 80%; left: 50%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 5%; left: 40%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 90%; left: 30%; width: 1.5px; height: 1.5px;"></div>
+    </div>
+
+    <section
+        class="min-h-screen radial-gradient-bg flex flex-col items-center relative overflow-hidden px-4 pt-24 pb-16">
+
+        <div class="text-center mb-8 relative z-2">
+            <h1
+                class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent mb-6 tracking-tight">
+                Developer hub
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto opacity-90 mb-8">
+                Comprehensive development resources for Story blockchain: APIs, SDKs, documentation, code examples,
+                and tools to build innovative applications on the Story ecosystem.
+            </p>
+        </div>
+
+        <div class="w-full max-w-4xl mb-12 relative z-2">
+            <div class="h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60"></div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-16 relative z-2">
+            <button
+                class="developer-card px-6 py-3 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300">
+                API Documentation
+            </button>
+            <button
+                class="developer-card px-6 py-3 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300">
+                SDK & Libraries
+            </button>
+            <button
+                class="developer-card px-6 py-3 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300">
+                Code Examples
+            </button>
+            <button
+                class="developer-card px-6 py-3 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300">
+                Development Tools
+            </button>
+        </div>
+    </section>
+
+    <script src="Header.js"></script>
+</body>
+
+</html>
