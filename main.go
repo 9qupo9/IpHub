@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -9,27 +10,25 @@ func main() {
 
 	серв.Handle("/media/", http.StripPrefix("/media/", http.FileServer(http.Dir("./media"))))
 
-	серв.HandleFunc("/validator.html", func(отвечающий http.ResponseWriter, запрос *http.Request) {
-		http.ServeFile(отвечающий, запрос, "validator.html")
-	})
-
-	серв.HandleFunc("/developer.html", func(отвечающий http.ResponseWriter, запрос *http.Request) {
-		http.ServeFile(отвечающий, запрос, "developer.html")
-	})
-
-	серв.HandleFunc("/community.html", func(отвечающий http.ResponseWriter, запрос *http.Request) {
-		http.ServeFile(отвечающий, запрос, "community.html")
-	})
-
-	серв.HandleFunc("/education.html", func(отвечающий http.ResponseWriter, запрос *http.Request) {
-		http.ServeFile(отвечающий, запрос, "education.html")
-	})
-
-	серв.HandleFunc("/Header.js", func(отвечающий http.ResponseWriter, запрос *http.Request) {
-		http.ServeFile(отвечающий, запрос, "Header.js")
-	})
-	
 	серв.HandleFunc("/", func(отвечающий http.ResponseWriter, запрос *http.Request) {
+		if запрос.URL.Path != "/" {
+
+			имяФайла := запрос.URL.Path[1:] + ".html"
+			
+			if _, ошибка := os.Stat(имяФайла); ошибка == nil {
+				http.ServeFile(отвечающий, запрос, имяФайла)
+				return
+			}
+			
+			if запрос.URL.Path == "/Header.js" {
+				http.ServeFile(отвечающий, запрос, "Header.js")
+				return
+			}
+			
+			http.NotFound(отвечающий, запрос)
+			return
+		}
+		
 		http.ServeFile(отвечающий, запрос, "Index.html")
 	})
 
