@@ -174,17 +174,12 @@
         </div>
 
         <div class="flex flex-wrap justify-start items-center gap-4 mb-8 relative z-2 max-w-6xl">
-            <button
+            <button id="validator-resources-btn"
                 class="px-6 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
                 style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
                 Validator resources
             </button>
-            <button
-                class="px-6 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
-                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                Useful tools
-            </button>
-            <button
+            <button id="useful-articles-btn"
                 class="px-6 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
                 style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
                 Useful articles
@@ -204,6 +199,36 @@
 
         <script src="Header.js"></script>
         <script src="ValidatorContent.js"></script>
+        <script src="UsefulArticles.js"></script>
+        <script>
+            // Инициализация компонентов
+            let validatorContent = null;
+            let usefulArticles = null;
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Обработчик для кнопки "Validator resources"
+                const validatorResourcesBtn = document.getElementById('validator-resources-btn');
+                if (validatorResourcesBtn) {
+                    validatorResourcesBtn.addEventListener('click', function () {
+                        if (!validatorContent) {
+                            validatorContent = new ValidatorContent();
+                        }
+                        validatorContent.init();
+                    });
+                }
+
+                // Обработчик для кнопки "Useful articles"
+                const usefulArticlesBtn = document.getElementById('useful-articles-btn');
+                if (usefulArticlesBtn) {
+                    usefulArticlesBtn.addEventListener('click', function () {
+                        if (!usefulArticles) {
+                            usefulArticles = new UsefulArticles();
+                        }
+                        usefulArticles.init();
+                    });
+                }
+            });
+        </script>
 </body>
 
 </html>

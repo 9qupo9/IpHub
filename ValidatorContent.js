@@ -892,28 +892,15 @@ class ValidatorContent {
             case 'endpoints':
                 return `
                     <div class="max-w-4xl">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-300 mb-3 underline">Endpoints:</h4>
-                                <div class="space-y-2 text-sm">
-                                    ${nodeStakeData.endpoints.map(endpoint => `
-                                        <div class="break-words">
-                                            <span class="text-gray-400">• ${endpoint.type}:</span>
-                                            <a href="${endpoint.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${endpoint.url}</a>
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-semibold text-gray-300 mb-3 underline">Ethereum Virtual Machine (EVM):</h4>
-                                <div class="space-y-2 text-sm">
-                                    ${nodeStakeData.evm.map(evm => `
-                                        <div class="break-words">
-                                            <span class="text-gray-400">• ${evm.type}:</span>
-                                            <a href="${evm.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${evm.url}</a>
-                                        </div>
-                                    `).join('')}
-                                </div>
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-gray-300 mb-3 underline">Endpoints:</h4>
+                            <div class="space-y-2 text-sm">
+                                ${nodeStakeData.endpoints.map(endpoint => `
+                                    <div class="break-words">
+                                        <span class="text-gray-400">• ${endpoint.type}:</span>
+                                        <a href="${endpoint.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${endpoint.url}</a>
+                                    </div>
+                                `).join('')}
                             </div>
                         </div>
                     </div>`;
