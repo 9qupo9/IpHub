@@ -180,27 +180,37 @@
             <div class="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-4 mb-16 relative z-2">
+        <div class="flex flex-wrap justify-start items-center gap-4 mb-8 relative z-2 max-w-6xl">
             <button
-                class="validator-card px-6 py-3 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300">
+                class="px-6 py-3 text-sm font-medium text-gray-300 hover:text-white bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
+                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
                 Validator resources
             </button>
             <button
-                class="validator-card px-6 py-3 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300">
+                class="px-6 py-3 text-sm font-medium text-gray-300 hover:text-white bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
+                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
+                Useful tools
+            </button>
+            <button
+                class="px-6 py-3 text-sm font-medium text-gray-300 hover:text-white bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
+                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
                 Useful articles
             </button>
             <button
-                class="validator-card px-6 py-3 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300">
-                Useful tools
-            </button>
-            <button
-                class="validator-card px-6 py-3 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300">
-                Useful tools
+                class="px-6 py-3 text-sm font-medium text-gray-300 hover:text-white bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
+                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
+                Become a Validator
             </button>
         </div>
-    </section>
 
-    <script src="Header.js"></script>
+        <div id="network-info" class="w-full max-w-6xl mb-8 relative z-2">
+        </div>
+
+        <div id="main-content" class="w-full max-w-6xl relative z-2">
+        </div>
+
+        <script src="Header.js"></script>
+        <script src="ValidatorContent.js"></script>
 </body>
 
 </html>
