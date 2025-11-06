@@ -727,6 +727,14 @@ class ValidatorContent {
                         </div>
                     </div>`;
 
+            case 'explorers':
+                return `
+                    <div class="max-w-2xl">
+                        <div class="mb-6">
+                            <p class="text-gray-400 text-sm leading-relaxed">ITRocket does not provide explorer services. Please check other providers or the official Story Network explorers.</p>
+                        </div>
+                    </div>`;
+
             default:
                 return `
                     <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-6">
