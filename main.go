@@ -31,7 +31,6 @@ func main() {
 				http.ServeFile(отвечающий, запрос, "ValidatorContent.js")
 				return
 			}
-			
 			http.NotFound(отвечающий, запрос)
 			return
 		}
