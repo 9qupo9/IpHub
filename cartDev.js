@@ -5,55 +5,55 @@ class CartDev {
                 id: 1,
                 title: 'Developer Office Hours Recap by RamzesVII 06.11',
                 image: 'devart/cart1.png',
-                link: '',
+                link: 'https://x.com/r_ladik/status/1986479041189494814',
             },
             {
                 id: 2,
                 title: 'Dev Office Hours Presentation 10/2',
                 image: 'devart/cart2.png',
-                link: '',
+                link: 'https://www.figma.com/exit?url=https%3A%2F%2Fdocs.google.com%2Fpresentation%2Fd%2F1bd3UDjm5yKY7_2dIgej8kAA7X_DbngcnUQjAma23d1k%2Fedit%3Fslide%3Did.g3445fc82bdc_0_105%23slide%3Did.g3445fc82bdc_0_105',
             },
             {
                 id: 3,
                 title: 'Developer Office Hours Recap by RamzesVII 02.10',
                 image: 'devart/cart3.png',
-                link: ''
+                link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2Fr_ladik%2Fstatus%2F1973805553957941507%2Fphoto%2F1'
             },
             {
                 id: 4,
                 title: 'Dev Office Hours Presentation 9/04',
                 image: 'devart/cart4.png',
-                link: ''
+                link: 'https://www.figma.com/exit?url=https%3A%2F%2Fdocs.google.com%2Fpresentation%2Fd%2F10A00PWv6gQL1FTm04xmPJJCtJMCbLbE85Angd-OqADc%2Fedit%3Fslide%3Did.g3445fc82bdc_0_105%23slide%3Did.g3445fc82bdc_0_105'
             },
             {
                 id: 5,
                 title: 'Developer Office Hours Recap by RamzesVII 04.09',
                 image: 'devart/cart5.png',
-                link: ''
+                link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2Fr_ladik%2Fstatus%2F1963672274227314689'
             },
             {
                 id: 6,
                 title: 'Dev Office Hours Presentation 8/28',
                 image: 'devart/cart6.png',
-                link: ''
+                link: 'https://www.figma.com/exit?url=https%3A%2F%2Fdocs.google.com%2Fpresentation%2Fd%2F1LDkXjcPol7mQIi6KvXz4MGeskY-aPDijU7b6AVYklUU%2Fedit%3Fslide%3Did.g3445fc82bdc_0_105%23slide%3Did.g3445fc82bdc_0_105'
             },
             {
                 id: 7,
                 title: 'Developer Office Hours Recap by RamzesVII 28.08',
                 image: 'devart/cart7.png',
-                link: ''
+                link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2Fr_ladik%2Fstatus%2F1961157623719293040'
             },
             {
                 id: 8,
                 title: 'Dev Office Hours Presentation 8/28',
                 image: 'devart/cart8.png',
-                link: ''
+                link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2FStoryEngs%2Fstatus%2F1961166414707913107'
             },
             {
                 id: 9,
                 title: '5-minute recap of Story Developer Office Hours 08/28 by Unity Nodes',
                 image: 'devart/cart9.png',
-                link: ''
+                link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2FUnityNodes%2Fstatus%2F1961210484041937338'
             }
 
         ];
