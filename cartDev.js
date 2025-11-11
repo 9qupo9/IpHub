@@ -1,0 +1,99 @@
+class CartDev {
+    constructor() {
+        this.devart = [
+            {
+                id: 1,
+                title: 'Developer Office Hours Recap by RamzesVII 06.11',
+                image: 'devart/cart1.png',
+                link: '',
+            },
+            {
+                id: 2,
+                title: 'Dev Office Hours Presentation 10/2',
+                image: 'devart/cart2.png',
+                link: '',
+            },
+            {
+                id: 3,
+                title: 'Developer Office Hours Recap by RamzesVII 02.10',
+                image: 'devart/cart3.png',
+                link: ''
+            },
+            {
+                id: 4,
+                title: 'Dev Office Hours Presentation 9/04',
+                image: 'devart/cart4.png',
+                link: ''
+            },
+            {
+                id: 5,
+                title: 'Developer Office Hours Recap by RamzesVII 04.09',
+                image: 'devart/cart5.png',
+                link: ''
+            },
+            {
+                id: 6,
+                title: 'Dev Office Hours Presentation 8/28',
+                image: 'devart/cart6.png',
+                link: ''
+            },
+            {
+                id: 7,
+                title: 'Developer Office Hours Recap by RamzesVII 28.08',
+                image: 'devart/cart7.png',
+                link: ''
+            },
+            {
+                id: 8,
+                title: 'Dev Office Hours Presentation 8/28',
+                image: 'devart/cart8.png',
+                link: ''
+            },
+            {
+                id: 9,
+                title: '5-minute recap of Story Developer Office Hours 08/28 by Unity Nodes',
+                image: 'devart/cart9.png',
+                link: ''
+            }
+
+        ];
+    }
+
+    init() {
+        this.renderdevartContent();
+    }
+
+    renderdevartContent() {
+        const networkContainer = document.getElementById('network-info');
+        const mainContainer = document.getElementById('main-content');
+
+        if (!networkContainer || !mainContainer) return;
+
+        networkContainer.innerHTML = '';
+        mainContainer.innerHTML = '';
+
+        mainContainer.innerHTML = `
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+                ${this.devart.map(article => this.renderArticleCard(article)).join('')}
+            </div>
+        `;
+    }
+
+    renderArticleCard(article) {
+        return `
+            <div class="w-full hover:scale-105 transition-transform duration-300 cursor-pointer h-full flex flex-col" onclick="window.open('${article.link}', '_blank')">
+                <div class="developer-card bg-transparent overflow-hidden mb-3 w-full flex-shrink-0">
+                    <img src="${article.image}" alt="${article.title}" class="w-full h-52 object-cover rounded-lg" onerror="this.src='media/about.png'">
+                </div>
+                <div class="w-full flex-grow">
+                    <h3 class="text-white font-bold text-sm mb-1 leading-tight">
+                        ${article.title}
+                    </h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        ${article.subtitle || 'Read more about this topic'}
+                    </p>
+                </div>
+            </div>
+        `;
+    }
+}

@@ -106,6 +106,13 @@
             border-radius: 16px;
         }
 
+        .validator-card-transparent {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid transparent;
+            border-radius: 16px;
+        }
+
         .gradient-border {
             background: linear-gradient(135deg, #8B5CF6, #EC4899, #3B82F6);
             padding: 2px;
@@ -163,7 +170,7 @@
                 class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6 tracking-tight">
                 Validator hub
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto opacity-90 mb-8">
+            <p class="text-lg md:text-xl text-white leading-relaxed max-w-4xl mx-auto opacity-90 mb-8">
                 Explore in this section: a curated collection of useful links, guides, analytical articles, and tools
                 for node setup, performance monitoring, and improving validator efficiency.
             </p>
@@ -182,7 +189,7 @@
             <button id="useful-articles-btn"
                 class="px-6 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
                 style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                Useful articles
+                Useful<br>articles
             </button>
             <button
                 class="px-6 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 w-[160px] text-center"
@@ -201,12 +208,12 @@
         <script src="ValidatorContent.js"></script>
         <script src="UsefulArticles.js"></script>
         <script>
-            // Инициализация компонентов
+
             let validatorContent = null;
             let usefulArticles = null;
 
             document.addEventListener('DOMContentLoaded', function () {
-                // Обработчик для кнопки "Validator resources"
+
                 const validatorResourcesBtn = document.getElementById('validator-resources-btn');
                 if (validatorResourcesBtn) {
                     validatorResourcesBtn.addEventListener('click', function () {
@@ -217,7 +224,6 @@
                     });
                 }
 
-                // Обработчик для кнопки "Useful articles"
                 const usefulArticlesBtn = document.getElementById('useful-articles-btn');
                 if (usefulArticlesBtn) {
                     usefulArticlesBtn.addEventListener('click', function () {

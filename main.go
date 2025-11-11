@@ -10,6 +10,8 @@ func main() {
 
 	серв.Handle("/media/", http.StripPrefix("/media/", http.FileServer(http.Dir("./media"))))
 	серв.Handle("/articles/", http.StripPrefix("/articles/", http.FileServer(http.Dir("./articles"))))
+	серв.Handle("/devart/", http.StripPrefix("/devart/", http.FileServer(http.Dir("./devart"))))
+	серв.Handle("/useart/", http.StripPrefix("/useart/", http.FileServer(http.Dir("./useart"))))
 
 	серв.HandleFunc("/", func(отвечающий http.ResponseWriter, запрос *http.Request) {
 		if запрос.URL.Path != "/" {
@@ -35,6 +37,18 @@ func main() {
 			if запрос.URL.Path == "/UsefulArticles.js" {
 				отвечающий.Header().Set("Content-Type", "application/javascript")
 				http.ServeFile(отвечающий, запрос, "UsefulArticles.js")
+				return
+			}
+
+			if запрос.URL.Path == "/cartDev.js" {
+				отвечающий.Header().Set("Content-Type", "application/javascript")
+				http.ServeFile(отвечающий, запрос, "cartDev.js")
+				return
+			}
+
+			if запрос.URL.Path == "/UseArticle.js" {
+				отвечающий.Header().Set("Content-Type", "application/javascript")
+				http.ServeFile(отвечающий, запрос, "UseArticle.js")
 				return
 			}
 			

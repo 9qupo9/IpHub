@@ -102,7 +102,7 @@
         .developer-card {
             background: rgba(17, 24, 39, 0.8);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(75, 85, 99, 0.3);
+            border: 1px solid transparent;
             border-radius: 16px;
             transition: all 0.3s ease;
         }
@@ -170,75 +170,86 @@
                 class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent mb-6 tracking-tight">
                 Developer hub
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto opacity-90 mb-8">
-                Comprehensive development resources for Story blockchain: APIs, SDKs, documentation, code examples,
-                and tools to build innovative applications on the Story ecosystem.
+            <p class="text-lg md:text-xl text-white leading-relaxed max-w-4xl mx-auto opacity-90 mb-8">
+                Explore in this section: all the essential resources for Story developers: useful links, GitHub
+                repositories, weekly Developer Office Hours recordings, insightful articles, and featured projects built
+                on Story.
+                Everything you need to learn, build, and stay updated in one place.
             </p>
         </div>
 
-            <div class="w-full max-w-4xl mb-12 relative z-2">
-                <div class="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
-            </div>
-    
-                <div class="flex flex-wrap justify-center items-center gap-6 mb-8 relative z-2">
-                    <button
-                        class="px-8 py-3 text-sm font-medium text-gray-300 hover:text-white bg-transparent rounded-full transition-all duration-300 min-w-[180px] text-center"
-                        style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                        API Documentation
-                    </button>
-                    <button
-                        class="px-8 py-3 text-sm font-medium text-gray-300 hover:text-white bg-transparent rounded-full transition-all duration-300 min-w-[180px] text-center"
-                        style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                        SDK & Libraries
-                    </button>
-                    <button
-                        class="px-8 py-3 text-sm font-medium text-gray-300 hover:text-white bg-transparent rounded-full transition-all duration-300 min-w-[180px] text-center"
-                        style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                        Code Examples
-                    </button>
-                    <button
-                        class="px-8 py-3 text-sm font-medium text-gray-300 hover:text-white bg-transparent rounded-full transition-all duration-300 min-w-[180px] text-center"
-                        style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                       Development Tools
-                    </button>
+        <div class="w-full max-w-4xl mb-12 relative z-2">
+            <div class="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
         </div>
 
-        <div class="developer-card bg-transparent p-6 mb-6 w-full max-w-6xl relative z-2">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="developer-card p-6">
-                    <h3 class="text-lg font-semibold text-blue-400 mb-4">🔧 Development Tools</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li>• Story Protocol SDK</li>
-                        <li>• CLI Tools</li>
-                        <li>• Testing Framework</li>
-                        <li>• Development Environment</li>
-                    </ul>
-                </div>
-                
-                <div class="developer-card p-6">
-                    <h3 class="text-lg font-semibold text-cyan-400 mb-4">📚 API & Documentation</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li>• REST API Reference</li>
-                        <li>• GraphQL Endpoints</li>
-                        <li>• WebSocket Connections</li>
-                        <li>• Integration Examples</li>
-                    </ul>
-                </div>
-                
-                <div class="developer-card p-6">
-                    <h3 class="text-lg font-semibold text-purple-400 mb-4">💻 Code Resources</h3>
-                    <ul class="space-y-2 text-sm text-gray-300">
-                        <li>• GitHub Repositories</li>
-                        <li>• Sample Applications</li>
-                        <li>• Smart Contract Templates</li>
-                        <li>• Integration Guides</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="flex flex-wrap justify-center items-center gap-6 mb-8 relative z-2">
+            <button
+                class="px-8 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 min-w-[180px] text-center"
+                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
+                Developer<br>resources
+            </button>
+            <button id="recap-dev-office-btn"
+                class="px-8 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 min-w-[180px] text-center"
+                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
+                Recap Dev-Office<br>Hours
+            </button>
+            <button id="useful-articles-btn"
+                class="px-8 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 min-w-[180px] text-center"
+                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
+                Useful<br>Articles
+            </button>
+            <button
+                class="px-8 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 min-w-[180px] text-center"
+                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
+                Become a<br>Developer
+            </button>
+        </div>
+
+        <div id="network-info" class="w-full max-w-6xl mb-8 relative z-2">
+        </div>
+
+        <div id="main-content" class="w-full max-w-6xl relative z-2">
         </div>
     </section>
 
     <script src="Header.js"></script>
+    <script src="cartDev.js"></script>
+    <script src="UseArticle.js"></script>
+    <script>
+        let cartDev = null;
+        let usefulArticles = null;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const recapDevOfficeBtn = document.getElementById('recap-dev-office-btn');
+            if (recapDevOfficeBtn) {
+                recapDevOfficeBtn.addEventListener('click', function () {
+                    if (!cartDev) {
+                        cartDev = new CartDev();
+                    }
+                    cartDev.init();
+                });
+            }
+
+            const usefulArticlesBtn = document.getElementById('useful-articles-btn');
+            if (usefulArticlesBtn) {
+                usefulArticlesBtn.addEventListener('click', function () {
+                    console.log('Useful Articles button clicked');
+                    try {
+                        if (!usefulArticles) {
+                            console.log('Creating new UsefulArticles instance');
+                            usefulArticles = new UsefulArticles();
+                        }
+                        console.log('Calling usefulArticles.init()');
+                        usefulArticles.init();
+                    } catch (error) {
+                        console.error('Error in Useful Articles:', error);
+                    }
+                });
+            } else {
+                console.error('Useful Articles button not found');
+            }
+        });
+    </script>
 </body>
 
 </html>
