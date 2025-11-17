@@ -46,13 +46,13 @@ class CartDev {
             {
                 id: 8,
                 title: 'Dev Office Hours Presentation 8/28',
-                image: 'devart/cart8.png',
+                image: 'devart/c8.png',
                 link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2FStoryEngs%2Fstatus%2F1961166414707913107'
             },
             {
                 id: 9,
                 title: '5-minute recap of Story Developer Office Hours 08/28 by Unity Nodes',
-                image: 'devart/cart9.png',
+                image: 'devart/c9.png',
                 link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2FUnityNodes%2Fstatus%2F1961210484041937338'
             }
 
@@ -82,14 +82,14 @@ class CartDev {
     renderArticleCard(article) {
         return `
             <div class="w-full hover:scale-105 transition-transform duration-300 cursor-pointer h-full flex flex-col" onclick="window.open('${article.link}', '_blank')">
-                <div class="developer-card bg-transparent overflow-hidden mb-3 w-full flex-shrink-0">
-                    <img src="${article.image}" alt="${article.title}" class="w-full h-52 object-cover rounded-lg" onerror="this.src='media/about.png'">
+                <div class="cartDev overflow-hidden mb-3 w-full flex-shrink-0">
+                    <img src="${article.image}" alt="${article.title}" class="w-full h-52 object-cover" onerror="this.src='media/about.png'">
                 </div>
                 <div class="w-full flex-grow">
-                    <h3 class="text-white font-bold text-sm mb-1 leading-tight">
+                    <h3 class="font-bold text-sm mb-1 leading-tight">
                         ${article.title}
                     </h3>
-                    <p class="text-gray-400 text-xs leading-relaxed">
+                    <p class="text-xs leading-relaxed">
                         ${article.subtitle || 'Read more about this topic'}
                     </p>
                 </div>
