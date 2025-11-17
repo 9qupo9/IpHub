@@ -51,6 +51,12 @@ func main() {
 				http.ServeFile(отвечающий, запрос, "UseArticle.js")
 				return
 			}
+
+			if запрос.URL.Path == "/DeveloperContent.js" {
+				отвечающий.Header().Set("Content-Type", "application/javascript")
+				http.ServeFile(отвечающий, запрос, "DeveloperContent.js")
+				return
+			}
 			
 			http.NotFound(отвечающий, запрос)
 			return
