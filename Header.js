@@ -1,7 +1,7 @@
 function createHeader() {
     return `
         <div class="fixed top-3 md:top-6 left-1/2 transform -translate-x-1/2 z-[9998] w-full max-w-[750px] px-4">
-            <header class="bg-gray-900/90 backdrop-blur-md border border-gray-700/50 rounded-2xl py-3 px-4 md:px-6 shadow-2xl shadow-purple-500/10">
+            <header class="bg-transparent backdrop-blur-md border border-gray-700/50 rounded-2xl py-3 px-4 md:px-6 shadow-2xl shadow-purple-500/10">
 
                 <div class="grid grid-cols-3 items-center lg:hidden">
 
@@ -33,11 +33,11 @@ function createHeader() {
                         <span class="text-white font-semibold text-lg">IPHub</span>
                     </div>
 
-                    <nav class="flex items-center space-x-2">
-                        <a href="validator" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Validator</a>
-                        <a href="developer" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Developer</a>
+                    <nav class="flex items-center space-x-6">
+                        <a href="validators" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Validators</a>
+                        <a href="developers" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Developers</a>
                         <a href="community" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Community</a>
-                        <a href="education" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Education</a>
+                        <a href="educational" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Educational</a>
                     </nav>
 
                     <div class="flex items-center space-x-3">
@@ -49,10 +49,10 @@ function createHeader() {
                 
                 <div id="mobile-menu" class="lg:hidden hidden mt-4 pt-4 border-t border-gray-700/50">
                     <nav class="grid grid-cols-2 gap-2">
-                        <a href="validator" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Validator</a>
-                        <a href="developer" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Developer</a>
+                        <a href="validators" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Validators</a>
+                        <a href="developers" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Developers</a>
                         <a href="community" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Community</a>
-                        <a href="education" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Education</a>
+                        <a href="educational" class="flex items-center justify-center text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">Educational</a>
                     </nav>
                 </div>
             </header>

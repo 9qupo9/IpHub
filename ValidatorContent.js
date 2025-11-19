@@ -40,8 +40,8 @@ class ValidatorContent {
                 </div>
                 
                 <!-- Search Input Field -->
-                <div class="mb-6 px-6">
-                    <div class="relative inline-block">
+                <div class="mb-6 flex justify-start">
+                    <div class="relative">
                         <input 
                             type="text" 
                             id="moniker-search" 
