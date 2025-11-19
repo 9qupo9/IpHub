@@ -59,12 +59,6 @@ func main() {
 				return
 			}
 
-			if запрос.URL.Path == "/tailwind.min.js" {
-				отвечающий.Header().Set("Content-Type", "application/javascript")
-				http.ServeFile(отвечающий, запрос, "tailwind.min.js")
-				return
-			}
-
 			if запрос.URL.Path == "/favicon.ico" {
 				отвечающий.Header().Set("Content-Type", "image/x-icon")
 				отвечающий.WriteHeader(http.StatusNoContent)

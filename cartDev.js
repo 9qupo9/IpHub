@@ -82,14 +82,14 @@ class CartDev {
     renderArticleCard(article) {
         return `
             <div class="w-full hover:scale-105 transition-transform duration-300 cursor-pointer h-full flex flex-col" onclick="window.open('${article.link}', '_blank')">
-                <div class="developer-card bg-transparent overflow-hidden mb-3 w-full flex-shrink-0">
-                    <img src="${article.image}" alt="${article.title}" class="w-full h-52 object-cover rounded-lg" onerror="this.src='media/about.png'">
+                <div class="cartDev overflow-hidden mb-3 w-full flex-shrink-0">
+                    <img src="${article.image}" alt="${article.title}" class="w-full h-52 object-cover" onerror="this.src='media/about.png'">
                 </div>
                 <div class="w-full flex-grow">
-                    <h3 class="text-white font-bold text-sm mb-1 leading-tight">
+                    <h3 class="font-bold text-sm mb-1 leading-tight">
                         ${article.title}
                     </h3>
-                    <p class="text-gray-400 text-xs leading-relaxed">
+                    <p class="text-xs leading-relaxed">
                         ${article.subtitle || 'Read more about this topic'}
                     </p>
                 </div>
