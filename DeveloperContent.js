@@ -23,7 +23,7 @@ class DeveloperContent {
         ];
 
         networkContainer.innerHTML = `
-            <div class="developer-card bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
+            <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                 <div class="mb-4">
                     <h3 class="text-sm font-medium text-gray-400">Select the section you need:</h3>
                 </div>
@@ -85,7 +85,7 @@ class DeveloperContent {
         switch (tabName) {
             case 'resources':
                 content = `
-                    <div class="developer-card bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
+                    <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
                                 <h4 class="text-sm font-semibold text-white mb-3">General:</h4>
@@ -212,7 +212,7 @@ class DeveloperContent {
 
             case 'endpoints':
                 content = `
-                    <div class="developer-card bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
+                    <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
                                 <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
@@ -323,7 +323,7 @@ class DeveloperContent {
                         </div>
                     </div>
                     
-                    <div class="developer-card bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
+                    <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
                                 <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
@@ -433,7 +433,7 @@ class DeveloperContent {
 
             case 'sdk':
                 content = `
-                    <div class="developer-card bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
+                    <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="space-y-6">
                         <div>
                             <h4 class="text-sm font-semibold text-white mb-3">SDK & Libraries:</h4>
@@ -545,7 +545,7 @@ class DeveloperContent {
 
             case 'explorers':
                 content = `
-                    <div class="developer-card bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
+                    <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
                                 <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
@@ -603,7 +603,7 @@ class DeveloperContent {
                         </div>
                     </div>
                     
-                    <div class="developer-card bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
+                    <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
                                 <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
@@ -663,7 +663,7 @@ class DeveloperContent {
                 break;
             case 'faucet':
                 content = `
-                    <div class="developer-card bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
+                    <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                         <div class="w-8 h-8 rounded overflow-hidden">
                             <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
