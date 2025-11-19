@@ -5,8 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education Hub - IPHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        *:not(#header-root *):not(#header-root):not(#info-modal *):not(#info-modal) {
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        #header-root,
+        #header-root *,
+        #info-modal,
+        #info-modal * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+        }
         body::-webkit-scrollbar {
             display: none;
         }
@@ -166,11 +180,15 @@
         class="min-h-screen radial-gradient-bg flex flex-col items-center relative overflow-hidden px-4 pt-32 pb-16">
 
         <div class="text-center mb-8 relative z-2">
-            <h1
-                class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-green-400 via-cyan-500 to-blue-600 bg-clip-text text-transparent mb-6 tracking-tight">
-                Education hub
-            </h1>
-            <p class="text-lg md:text-xl text-white leading-relaxed max-w-4xl mx-auto opacity-90 mb-8">
+            <div class="inline-block mb-6">
+                <h1
+                    class="text-4xl md:text-6xl font-normal text-white mb-0 tracking-tight"
+                    style="font-family: 'Kantumruy', sans-serif;">
+                    Education hub
+                </h1>
+            </div>
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto mb-8"
+               style="font-family: 'Kantumruy', sans-serif;">
                 Learn about Story blockchain technology: comprehensive tutorials, courses, documentation,
                 and educational resources for beginners and advanced users alike.
             </p>
@@ -180,27 +198,11 @@
             <div class="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
         </div>
 
-        <div class="flex flex-wrap justify-center items-center gap-2 mb-8 relative z-2">
-            <button
-                class="px-4 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 min-w-[140px] text-center"
-                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                Getting Started
-            </button>
-            <button
-                class="px-4 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 min-w-[140px] text-center"
-                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                Tutorials & Guides
-            </button>
-            <button
-                class="px-4 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 min-w-[140px] text-center"
-                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                Video Courses
-            </button>
-            <button
-                class="px-4 py-3 text-sm font-medium text-white hover:text-gray-300 bg-transparent rounded-full transition-all duration-300 min-w-[140px] text-center"
-                style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                Technical Docs
-            </button>
+        <div class="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:items-center sm:gap-6 mb-8 relative z-2 max-w-6xl sm:flex-wrap">
+            <img id="getting-started-btn" src="icon/DevSour.png" alt="Getting Started" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="tutorials-guides-btn" src="icon/Recap.png" alt="Tutorials & Guides" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="video-courses-btn" src="icon/Useful.png" alt="Video Courses" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="technical-docs-btn" src="icon/Becom.png" alt="Technical Docs" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
         </div>
     </section>
 

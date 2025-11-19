@@ -12,6 +12,7 @@ func main() {
 	серв.Handle("/articles/", http.StripPrefix("/articles/", http.FileServer(http.Dir("./articles"))))
 	серв.Handle("/devart/", http.StripPrefix("/devart/", http.FileServer(http.Dir("./devart"))))
 	серв.Handle("/useart/", http.StripPrefix("/useart/", http.FileServer(http.Dir("./useart"))))
+	серв.Handle("/icon/", http.StripPrefix("/icon/", http.FileServer(http.Dir("./icon"))))
 
 	серв.HandleFunc("/", func(отвечающий http.ResponseWriter, запрос *http.Request) {
 		if запрос.URL.Path != "/" {
@@ -49,6 +50,24 @@ func main() {
 			if запрос.URL.Path == "/UseArticle.js" {
 				отвечающий.Header().Set("Content-Type", "application/javascript")
 				http.ServeFile(отвечающий, запрос, "UseArticle.js")
+				return
+			}
+
+			if запрос.URL.Path == "/DeveloperContent.js" {
+				отвечающий.Header().Set("Content-Type", "application/javascript")
+				http.ServeFile(отвечающий, запрос, "DeveloperContent.js")
+				return
+			}
+
+			if запрос.URL.Path == "/tailwind.min.js" {
+				отвечающий.Header().Set("Content-Type", "application/javascript")
+				http.ServeFile(отвечающий, запрос, "tailwind.min.js")
+				return
+			}
+
+			if запрос.URL.Path == "/favicon.ico" {
+				отвечающий.Header().Set("Content-Type", "image/x-icon")
+				отвечающий.WriteHeader(http.StatusNoContent)
 				return
 			}
 			

@@ -46,13 +46,13 @@ class CartDev {
             {
                 id: 8,
                 title: 'Dev Office Hours Presentation 8/28',
-                image: 'devart/cart8.png',
+                image: 'devart/c8.png',
                 link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2FStoryEngs%2Fstatus%2F1961166414707913107'
             },
             {
                 id: 9,
                 title: '5-minute recap of Story Developer Office Hours 08/28 by Unity Nodes',
-                image: 'devart/cart9.png',
+                image: 'devart/c9.png',
                 link: 'https://www.figma.com/exit?url=https%3A%2F%2Fx.com%2FUnityNodes%2Fstatus%2F1961210484041937338'
             }
 

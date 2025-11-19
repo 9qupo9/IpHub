@@ -78,17 +78,19 @@ class UsefulArticles {
         mainContainer.innerHTML = '';
 
         mainContainer.innerHTML = `
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-                ${this.articles.map(article => this.renderArticleCard(article)).join('')}
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+                    ${this.articles.map(article => this.renderArticleCard(article)).join('')}
+                </div>
             </div>
         `;
     }
 
     renderArticleCard(article) {
         return `
-            <div class="w-full hover:scale-105 transition-transform duration-300 cursor-pointer h-full flex flex-col" onclick="window.open('${article.link}', '_blank')">
+            <div class="w-full min-w-[300px] hover:scale-105 transition-transform duration-300 cursor-pointer h-full flex flex-col" onclick="window.open('${article.link}', '_blank')">
                 <div class="validator-card-transparent bg-transparent overflow-hidden mb-3 w-full flex-shrink-0">
-                    <img src="${article.image}" alt="${article.title}" class="w-full h-52 object-cover rounded-lg" onerror="this.src='media/about.png'">
+                    <img src="${article.image}" alt="${article.title}" class="w-full h-40 object-cover rounded-lg" onerror="this.src='media/about.png'">
                 </div>
                 <div class="w-full flex-grow">
                     <h3 class="text-white font-bold text-sm mb-1 leading-tight">

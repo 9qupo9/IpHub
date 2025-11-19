@@ -5,8 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        *:not(#header-root *):not(#header-root):not(#info-modal *):not(#info-modal) {
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        #header-root,
+        #header-root *,
+        #info-modal,
+        #info-modal * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+        }
         body::-webkit-scrollbar {
             display: none;
         }
@@ -295,13 +309,17 @@
 
         <div class="absolute top-[80px] sm:top-24 left-1/2 transform -translate-x-1/2 text-center px-4 sm:px-6 w-full max-w-md sm:max-w-2xl md:max-w-4xl mx-auto"
             style="z-index: 1;">
-            <h1
-                class="text-xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse tracking-tight leading-tight sm:leading-none drop-shadow-2xl mb-3">
-                Resource Hub for the Story Ecosystem
-            </h1>
-            <p class="text-[10px] sm:text-[18px] md:text-[18px] text-gray-300 leading-relaxed opacity-90"></p>
-            A user-friendly, structured platform that brings together all the essential resources of the ecosystem
-            in one place, making navigation simple, clear, and enjoyable for both newcomers and active participants.
+            <div class="inline-block mb-6">
+                <h1
+                    class="text-xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse tracking-tight leading-tight sm:leading-none drop-shadow-2xl mb-0"
+                    style="font-family: 'Kantumruy', sans-serif;">
+                    Resource Hub for the Story Ecosystem
+                </h1>
+            </div>
+            <p class="text-[10px] sm:text-[18px] md:text-[18px] text-gray-400 leading-relaxed mb-8"
+               style="font-family: 'Kantumruy', sans-serif;">
+                A user-friendly, structured platform that brings together all the essential resources of the ecosystem
+                in one place, making navigation simple, clear, and enjoyable for both newcomers and active participants.
             </p>
         </div>
 
