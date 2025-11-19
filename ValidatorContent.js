@@ -446,8 +446,8 @@ class ValidatorContent {
                     <!-- NodeStake Services -->
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-                                <span class="text-sm font-bold text-white">NS</span>
+                            <div class="w-8 h-8 rounded overflow-hidden">
+                                <img src="https://pbs.twimg.com/profile_images/1656150389518139393/XIWb60AJ_400x400.jpg" alt="NodeStake" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">NodeStake Services</span>
                         </div>
@@ -502,8 +502,8 @@ class ValidatorContent {
                     <!-- NodeStake Endpoints -->
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-                                <span class="text-sm font-bold text-white">NS</span>
+                            <div class="w-8 h-8 rounded overflow-hidden">
+                                <img src="https://pbs.twimg.com/profile_images/1656150389518139393/XIWb60AJ_400x400.jpg" alt="NodeStake" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">NodeStake Endpoints</span>
                         </div>
@@ -545,8 +545,8 @@ class ValidatorContent {
                     <!-- NodeStake Snapshots -->
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-                                <span class="text-sm font-bold text-white">NS</span>
+                            <div class="w-8 h-8 rounded overflow-hidden">
+                                <img src="https://pbs.twimg.com/profile_images/1656150389518139393/XIWb60AJ_400x400.jpg" alt="NodeStake" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">NodeStake Snapshots</span>
                         </div>

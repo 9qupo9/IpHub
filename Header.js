@@ -11,9 +11,6 @@ function createHeader() {
                     </div>
 
                     <div class="flex justify-center">
-                        <div class="flex items-center justify-center px-2 py-1.5 rounded-lg" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                            <span class="text-gray-300 text-xs font-medium">License 2025</span>
-                        </div>
                     </div>
 
                     <div class="flex items-center justify-end space-x-2">
@@ -47,10 +44,6 @@ function createHeader() {
                         <button class="info-btn text-gray-300 hover:text-white transition-colors duration-200">
                             <img src="media/about.png" alt="About" class="w-7 h-7">
                         </button>
-                        
-                        <div class="flex items-center justify-center px-3 py-2 rounded-lg" style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat;">
-                            <span class="text-gray-300 text-sm font-medium">License 2025</span>
-                        </div>
                     </div>
                 </div>
                 
