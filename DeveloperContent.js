@@ -28,7 +28,7 @@ class DeveloperContent {
                     <h3 class="text-sm font-medium text-gray-400">Select the section you need:</h3>
                 </div>
                 
-                <div class="flex flex-wrap justify-start gap-0.5 mb-6">
+                <div class="flex flex-wrap gap-0.5 mb-6 -ml-2">
                     ${navButtons.map(button => `
                         <button class="px-2 py-2 font-medium rounded-lg transition-all duration-300 min-w-[90px] sm:min-w-[120px] text-center ${button.active ? 'text-purple-300' : 'text-white'} hover:text-gray-300 flex-shrink-0" 
                         style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat; font-family: 'Source Code Pro', monospace; font-size: 10.71px;"

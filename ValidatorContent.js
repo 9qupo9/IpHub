@@ -26,10 +26,10 @@ class ValidatorContent {
         networkContainer.innerHTML = `
             <div class="validator-card bg-transparent p-6 mb-6">
                 <div class="mb-4">
-                    <h3 class="text-sm font-medium text-gray-400">Network: Mainnet (story-1)</h3>
+                    <h3 class="text-sm font-medium text-white">Network: Mainnet (story-1)</h3>
                 </div>
                 
-                <div class="flex flex-wrap justify-start gap-0.5 mb-6">
+                <div class="flex flex-wrap gap-0.5 mb-6 -ml-2">
                     ${navButtons.map(button => `
                         <button class="px-2 py-2 font-medium rounded-lg transition-all duration-300 min-w-[90px] sm:min-w-[120px] text-center ${button.active ? 'text-purple-300' : 'text-white'} hover:text-gray-300 flex-shrink-0" 
                         style="background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat; font-family: 'Source Code Pro', monospace; font-size: 10.71px;"
@@ -40,16 +40,14 @@ class ValidatorContent {
                 </div>
                 
                 <!-- Search Input Field -->
-                <div class="mb-6 flex justify-start">
-                    <div class="relative">
-                        <input 
-                            type="text" 
-                            id="moniker-search" 
-                            placeholder="Search by moniker" 
-                            class="px-3 py-1 text-white placeholder-gray-400 rounded-full focus:outline-none transition-all duration-300"
-                            style="background: #0C0A13; border: 1px solid rgba(147, 51, 234, 0.5); font-family: 'Source Code Pro', monospace; font-size: 12px; width: 150px;"
-                        />
-                    </div>
+                <div class="mb-6">
+                    <input 
+                        type="text" 
+                        id="moniker-search" 
+                        placeholder="Search by moniker" 
+                        class="px-3 py-1 text-white placeholder-white rounded-full focus:outline-none transition-all duration-300"
+                        style="background: #0C0A13; border: 1px solid rgba(147, 51, 234, 0.5); font-family: 'Source Code Pro', monospace; font-size: 12px; width: 150px;"
+                    />
                 </div>
                 
                 <div id="unified-content-container" class="mt-6">
@@ -72,7 +70,7 @@ class ValidatorContent {
             });
         });
 
-        // Search input event listener
+
         const searchInput = document.getElementById('moniker-search');
         if (searchInput) {
             searchInput.addEventListener('input', (e) => {
@@ -196,7 +194,7 @@ class ValidatorContent {
                                 <div class="space-y-2 text-sm">
                                     ${storyData.resources.map(resource => `
                                         <div class="break-words">
-                                            <span class="text-gray-400">• ${resource.name}:</span>
+                                            <span class="text-white">• ${resource.name}:</span>
                                             <a href="${resource.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${resource.url}</a>
                                         </div>
                                     `).join('')}
@@ -207,7 +205,7 @@ class ValidatorContent {
                                 <div class="space-y-2 text-sm">
                                     ${storyData.endpoints.map(endpoint => `
                                         <div class="break-words">
-                                            <span class="text-gray-400">• ${endpoint.type}:</span>
+                                            <span class="text-white">• ${endpoint.type}:</span>
                                             <a href="${endpoint.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${endpoint.url}</a>
                                         </div>
                                     `).join('')}
@@ -218,7 +216,7 @@ class ValidatorContent {
                                 <div class="space-y-2 text-sm">
                                     ${storyData.explorers.map(explorer => `
                                         <div class="break-words">
-                                            <span class="text-gray-400">•</span>
+                                            <span class="text-white">•</span>
                                             <a href="${explorer.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${explorer.url}</a>
                                         </div>
                                     `).join('')}
@@ -241,7 +239,7 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3">Services:</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">•</span>
+                                        <span class="text-white">•</span>
                                         <a href="https://itrocket.net/services/mainnet/story/" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://itrocket.net/services/mainnet/story/</a>
                                     </div>
                                 </div>
@@ -250,19 +248,19 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3">Endpoints (Archive):</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">• RPC:</span>
+                                        <span class="text-white">• RPC:</span>
                                         <a href="https://story-mainnet-rpc.itrocket.net" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://story-mainnet-rpc.itrocket.net</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Websocket:</span>
+                                        <span class="text-white">• Websocket:</span>
                                         <a href="wss://story-mainnet-ws.itrocket.net" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">wss://story-mainnet-ws.itrocket.net</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• API:</span>
+                                        <span class="text-white">• API:</span>
                                         <a href="https://story-mainnet-api.itrocket.net" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://story-mainnet-api.itrocket.net</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Cosmos REST API (on port 5317):</span>
+                                        <span class="text-white">• Cosmos REST API (on port 5317):</span>
                                         <a href="https://story-mainnet.itrocket.net" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://story-mainnet.itrocket.net</a>
                                     </div>
                                 </div>
@@ -271,11 +269,11 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3">Ethereum Virtual Machine (EVM):</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">• JSON RPC:</span>
+                                        <span class="text-white">• JSON RPC:</span>
                                         <a href="https://story-mainnet-evm.itrocket.net" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://story-mainnet-evm.itrocket.net</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Websocket:</span>
+                                        <span class="text-white">• Websocket:</span>
                                         <a href="wss://story-mainnet-ws.itrocket.net" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">wss://story-mainnet-ws.itrocket.net</a>
                                     </div>
                                 </div>
@@ -283,7 +281,7 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3 mt-6">Snapshots:</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">•</span>
+                                        <span class="text-white">•</span>
                                         <a href="https://itrocket.net/services/mainnet/story/" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://itrocket.net/services/mainnet/story/</a>
                                     </div>
                                 </div>
@@ -291,23 +289,23 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3 mt-6">Tools:</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Validators Performance:</span>
+                                        <span class="text-white">• Validators Performance:</span>
                                         <a href="https://itrocket.net/services/mainnet/story/analytics/validators-performance/" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://itrocket.net/services/mainnet/story/analytics/validators-performance/</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Decentralization Analytics:</span>
+                                        <span class="text-white">• Decentralization Analytics:</span>
                                         <a href="https://itrocket.net/services/mainnet/story/decentralization/relayers/" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://itrocket.net/services/mainnet/story/decentralization/relayers/</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Public RPC Scanner:</span>
+                                        <span class="text-white">• Public RPC Scanner:</span>
                                         <a href="https://itrocket.net/services/mainnet/story/public-rpc/" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://itrocket.net/services/mainnet/story/public-rpc/</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Consensus:</span>
+                                        <span class="text-white">• Consensus:</span>
                                         <a href="https://itrocket.net/services/mainnet/story/analytics/consensus/" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://itrocket.net/services/mainnet/story/analytics/consensus/</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Monitoring Script:</span>
+                                        <span class="text-white">• Monitoring Script:</span>
                                         <a href="https://itrocket.net/services/mainnet/story/monitoring/" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://itrocket.net/services/mainnet/story/monitoring/</a>
                                     </div>
                                 </div>
@@ -329,7 +327,7 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3">Explorer:</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">•</span>
+                                        <span class="text-white">•</span>
                                         <a href="https://story.explorers.guru" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://story.explorers.guru</a>
                                     </div>
                                 </div>
@@ -351,7 +349,7 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3">Service:</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">•</span>
+                                        <span class="text-white">•</span>
                                         <a href="https://nodestake.org/story" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://nodestake.org/story</a>
                                     </div>
                                 </div>
@@ -360,27 +358,27 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3">Endpoints:</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">• RPC:</span>
+                                        <span class="text-white">• RPC:</span>
                                         <a href="https://rpc.story.nodestake.org:443" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://rpc.story.nodestake.org:443</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• gRPC:</span>
+                                        <span class="text-white">• gRPC:</span>
                                         <a href="grpc.story.nodestake.org:443" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">grpc.story.nodestake.org:443</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• API:</span>
+                                        <span class="text-white">• API:</span>
                                         <a href="https://api.story.nodestake.org:443" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://api.story.nodestake.org:443</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Peer:</span>
+                                        <span class="text-white">• Peer:</span>
                                         <a href="https://ss.story.nodestake.org/peers.txt" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://ss.story.nodestake.org/peers.txt</a>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Seed:</span>
+                                        <span class="text-white">• Seed:</span>
                                         <span class="text-blue-400 ml-1 break-all">327fb4151de9f78f29ff10714085e347a4e3c836@rpc.story.nodestake.org:666</span>
                                     </div>
                                     <div class="break-words">
-                                        <span class="text-gray-400">• Addrbook:</span>
+                                        <span class="text-white">• Addrbook:</span>
                                         <a href="https://ss.story.nodestake.org/addrbook.json" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://ss.story.nodestake.org/addrbook.json</a>
                                     </div>
                                 </div>
@@ -389,7 +387,7 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3">Ethereum Virtual Machine (EVM):</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">• JSON-RPC:</span>
+                                        <span class="text-white">• JSON-RPC:</span>
                                         <a href="https://evmrpc.story.nodestake.org" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://evmrpc.story.nodestake.org</a>
                                     </div>
                                 </div>
@@ -397,7 +395,7 @@ class ValidatorContent {
                                 <h4 class="text-sm font-semibold text-white mb-3 mt-6">Snapshot:</h4>
                                 <div class="space-y-2 text-sm">
                                     <div class="break-words">
-                                        <span class="text-gray-400">•</span>
+                                        <span class="text-white">•</span>
                                         <a href="https://nodestake.org/story" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://nodestake.org/story</a>
                                     </div>
                                 </div>
@@ -420,7 +418,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${storyData.resources.map(resource => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">• ${resource.name}:</span>
+                                    <span class="text-white">• ${resource.name}:</span>
                                     <a href="${resource.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${resource.url}</a>
                                 </div>
                             `).join('')}
@@ -437,7 +435,7 @@ class ValidatorContent {
                         </div>
                         <div class="space-y-2 text-sm">
                             <div class="break-words">
-                                <span class="text-gray-400">•</span>
+                                <span class="text-white">•</span>
                                 <a href="https://itrocket.net/services/mainnet/story/" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://itrocket.net/services/mainnet/story/</a>
                             </div>
                         </div>
@@ -453,7 +451,7 @@ class ValidatorContent {
                         </div>
                         <div class="space-y-2 text-sm">
                             <div class="break-words">
-                                <span class="text-gray-400">•</span>
+                                <span class="text-white">•</span>
                                 <a href="https://nodestake.org/story" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">https://nodestake.org/story</a>
                             </div>
                         </div>
@@ -474,7 +472,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${storyData.endpoints.map(endpoint => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">• ${endpoint.type}:</span>
+                                    <span class="text-white">• ${endpoint.type}:</span>
                                     <a href="${endpoint.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${endpoint.url}</a>
                                 </div>
                             `).join('')}
@@ -492,7 +490,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${itrocketData.endpoints.map(endpoint => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">• ${endpoint.type}:</span>
+                                    <span class="text-white">• ${endpoint.type}:</span>
                                     <a href="${endpoint.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${endpoint.url}</a>
                                 </div>
                             `).join('')}
@@ -510,7 +508,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${nodestakeData.endpoints.map(endpoint => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">• ${endpoint.type}:</span>
+                                    <span class="text-white">• ${endpoint.type}:</span>
                                     ${endpoint.type === 'Seed' ?
                         `<span class="text-blue-400 ml-1 break-all">${endpoint.url}</span>` :
                         `<a href="${endpoint.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${endpoint.url}</a>`
@@ -535,7 +533,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${itrocketData.snapshots.map(snapshot => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">•</span>
+                                    <span class="text-white">•</span>
                                     <a href="${snapshot.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${snapshot.url}</a>
                                 </div>
                             `).join('')}
@@ -553,7 +551,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${nodestakeData.snapshots.map(snapshot => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">•</span>
+                                    <span class="text-white">•</span>
                                     <a href="${snapshot.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${snapshot.url}</a>
                                 </div>
                             `).join('')}
@@ -575,7 +573,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${storyData.explorers.map(explorer => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">•</span>
+                                    <span class="text-white">•</span>
                                     <a href="${explorer.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${explorer.url}</a>
                                 </div>
                             `).join('')}
@@ -593,7 +591,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${nodesGuruData.explorers.map(explorer => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">•</span>
+                                    <span class="text-white">•</span>
                                     <a href="${explorer.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${explorer.url}</a>
                                 </div>
                             `).join('')}
@@ -615,7 +613,7 @@ class ValidatorContent {
                         <div class="space-y-2 text-sm">
                             ${itrocketData.tools.map(tool => `
                                 <div class="break-words">
-                                    <span class="text-gray-400">• ${tool.name}:</span>
+                                    <span class="text-white">• ${tool.name}:</span>
                                     <a href="${tool.url}" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-all">${tool.url}</a>
                                 </div>
                             `).join('')}

@@ -7,7 +7,8 @@
     <title>Education Hub - IPHub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -21,6 +22,7 @@
         #info-modal * {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
         }
+
         body::-webkit-scrollbar {
             display: none;
         }
@@ -181,14 +183,13 @@
 
         <div class="text-center mb-8 relative z-2">
             <div class="inline-block mb-6">
-                <h1
-                    class="text-4xl md:text-6xl font-normal text-white mb-0 tracking-tight"
+                <h1 class="text-4xl md:text-6xl font-normal text-white mb-0 tracking-tight"
                     style="font-family: 'Kantumruy', sans-serif;">
                     Education hub
                 </h1>
             </div>
             <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto mb-8"
-               style="font-family: 'Kantumruy', sans-serif;">
+                style="font-family: 'Kantumruy', sans-serif;">
                 Learn about Story blockchain technology: comprehensive tutorials, courses, documentation,
                 and educational resources for beginners and advanced users alike.
             </p>
@@ -198,15 +199,55 @@
             <div class="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:items-center sm:gap-6 mb-8 relative z-2 max-w-6xl sm:flex-wrap">
-            <img id="getting-started-btn" src="icon/DevSour.png" alt="Getting Started" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
-            <img id="tutorials-guides-btn" src="icon/Recap.png" alt="Tutorials & Guides" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
-            <img id="video-courses-btn" src="icon/Useful.png" alt="Video Courses" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
-            <img id="technical-docs-btn" src="icon/Becom.png" alt="Technical Docs" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+        <div
+            class="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:items-center sm:gap-6 mb-8 relative z-2 max-w-6xl sm:flex-wrap">
+            <img id="getting-started-btn" src="icon/About.png" alt="Getting Started"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="tutorials-guides-btn" src="icon/Video.png" alt="Tutorials & Guides"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="video-courses-btn" src="icon/Tutorial.png" alt="Video Courses"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="technical-docs-btn" src="icon/Useful.png" alt="Technical Docs"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+        </div>
+
+        <div id="network-info" class="w-full mb-8 relative z-2">
+        </div>
+
+        <div id="main-content" class="w-full relative z-2">
         </div>
     </section>
 
     <script src="Header.js"></script>
+    <script src="EducationArticles.js"></script>
+    <script src="EducationArticlesTwo.js"></script>
+    <script>
+        let educationArticles = null;
+        let educationArticlesTwo = null;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const technicalDocsBtn = document.getElementById('technical-docs-btn');
+            const videoCoursesBtn = document.getElementById('video-courses-btn');
+            
+            if (technicalDocsBtn) {
+                technicalDocsBtn.addEventListener('click', function () {
+                    if (!educationArticles) {
+                        educationArticles = new EducationArticles();
+                    }
+                    educationArticles.init();
+                });
+            }
+
+            if (videoCoursesBtn) {
+                videoCoursesBtn.addEventListener('click', function () {
+                    if (!educationArticlesTwo) {
+                        educationArticlesTwo = new EducationArticlesTwo();
+                    }
+                    educationArticlesTwo.init();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

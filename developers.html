@@ -222,11 +222,11 @@
     </section>
 
     <script src="Header.js"></script>
-    <script src="cartDev.js"></script>
-    <script src="UseArticle.js"></script>
+    <script src="DeveloperArticles.js"></script>
+    <script src="DeveloperArticlesTwo.js"></script>
     <script src="DeveloperContent.js"></script>
     <script>
-        let cartDev = null;
+        let developerArticles = null;
         let usefulArticles = null;
         let developerContent = null;
 
@@ -250,10 +250,10 @@
             const recapDevOfficeBtn = document.getElementById('recap-dev-office-btn');
             if (recapDevOfficeBtn) {
                 recapDevOfficeBtn.addEventListener('click', function () {
-                    if (!cartDev) {
-                        cartDev = new CartDev();
+                    if (!developerArticles) {
+                        developerArticles = new DeveloperArticles();
                     }
-                    cartDev.init();
+                    developerArticles.init();
                 });
             }
 
@@ -264,7 +264,7 @@
                     try {
                         if (!usefulArticles) {
                             console.log('Creating new UsefulArticles instance');
-                            usefulArticles = new UsefulArticles();
+                            usefulArticles = new DeveloperArticlesTwo();
                         }
                         console.log('Calling usefulArticles.init()');
                         usefulArticles.init();

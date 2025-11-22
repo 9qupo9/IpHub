@@ -199,15 +199,40 @@
             <div class="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
         </div>
 
-        <div class="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:items-center sm:gap-6 mb-8 relative z-2 max-w-6xl sm:flex-wrap">
-            <img id="discord-telegram-btn" src="icon/DevSour.png" alt="Discord & Telegram" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
-            <img id="governance-forum-btn" src="icon/Recap.png" alt="Governance Forum" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
-            <img id="social-media-btn" src="icon/Useful.png" alt="Social Media" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
-            <img id="events-meetups-btn" src="icon/Becom.png" alt="Events & Meetups" class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+        <div
+            class="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:items-center sm:gap-6 mb-8 relative z-2 max-w-6xl sm:flex-wrap">
+            <img id="discord-telegram-btn" src="icon/ComResour.png" alt="Discord & Telegram"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="governance-forum-btn" src="icon/ComRecapAMA.png" alt="Governance Forum"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="social-media-btn" src="icon/Useful.png" alt="Social Media"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+        </div>
+
+        <div id="network-info" class="w-full mb-8 relative z-2">
+        </div>
+
+        <div id="main-content" class="w-full relative z-2">
         </div>
     </section>
 
     <script src="Header.js"></script>
+    <script src="CommunityArticles.js"></script>
+    <script>
+        let communityArticles = null;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const socialMediaBtn = document.getElementById('social-media-btn');
+            if (socialMediaBtn) {
+                socialMediaBtn.addEventListener('click', function () {
+                    if (!communityArticles) {
+                        communityArticles = new CommunityArticles();
+                    }
+                    communityArticles.init();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

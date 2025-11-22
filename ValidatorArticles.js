@@ -1,74 +1,74 @@
-class UsefulArticles {
+class ValidatorArticles {
     constructor() {
-        this.articles = [
+        this.ValidArticles = [
             {
                 id: 1,
                 title: 'Node Maintenance on Story Protocol: Best Practices from Everstake',
-                image: 'articles/perfomance.png',
+                image: 'ValidArticles/perfomance.png',
                 link: 'https://everstake.one/blog/node-maintenance-on-story-protocol-best-practices-from-everstake',
             },
             {
                 id: 2,
                 title: 'Integration Solution for secp256k1 Support',
-                image: 'articles/cart.png',
+                image: 'ValidArticles/cart.png',
                 link: 'https://forum.story.foundation/t/integration-solution-for-secp256k1-support/37106',
             },
             {
                 id: 3,
                 title: 'Story Network Update: From Launch to Chapter 2',
-                image: 'articles/network.png',
+                image: 'ValidArticles/network.png',
                 link: 'https://www.story.foundation/blog/story-network-update'
             },
             {
                 id: 4,
                 title: 'Upgrading to Pectra: Story\'s Geth Fork will soon incorporate Ethereum\'s latest EIPs',
-                image: 'articles/upgrade.png',
+                image: 'ValidArticles/upgrade.png',
                 link: 'https://www.story.foundation/blog/upgrading-to-pectra'
             },
             {
                 id: 5,
                 title: 'Story Protocol: Tokenomics & Staking Highlights',
-                image: 'articles/locked.png',
+                image: 'ValidArticles/locked.png',
                 link: 'https://everstake.one/blog/story-protocol-tokenomics-staking-highlights'
             },
             {
                 id: 6,
                 title: 'Using Cosmovisor in Story Protocol: a Guide',
-                image: 'articles/master.png',
+                image: 'ValidArticles/master.png',
                 link: 'https://everstake.one/blog/using-cosmovisor-in-story-protocol-a-guide'
             },
             {
                 id: 7,
                 title: 'Private Key Encryption for Validators',
-                image: 'articles/privat.png',
+                image: 'ValidArticles/privat.png',
                 link: 'https://www.story.foundation/blog/private-key-encryption-for-validators'
             },
             {
                 id: 8,
                 title: 'The Big Bang Block: A new era of staking rewards',
-                image: 'articles/block.png',
+                image: 'ValidArticles/block.png',
                 link: 'https://www.story.foundation/blog/big-bang-block'
             },
             {
                 id: 9,
                 title: 'Story Network Postmortem: Bug Bounty Criticals Seamlessly Patched',
-                image: 'articles/story.png',
+                image: 'ValidArticles/story.png',
                 link: 'https://www.story.foundation/blog/story-network-postmortem'
             },
             {
                 id: 10,
                 title: 'Technical Roadmap Update: A closer look at the path ahead',
-                image: 'articles/black.png',
+                image: 'ValidArticles/black.png',
                 link: 'https://www.story.foundation/blog/story-technical-roadmap'
             }
         ];
     }
 
     init() {
-        this.renderArticlesContent();
+        this.renderValidArticlesContent();
     }
 
-    renderArticlesContent() {
+    renderValidArticlesContent() {
         const networkContainer = document.getElementById('network-info');
         const mainContainer = document.getElementById('main-content');
 
@@ -80,7 +80,7 @@ class UsefulArticles {
         mainContainer.innerHTML = `
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
-                    ${this.articles.map(article => this.renderArticleCard(article)).join('')}
+                    ${this.ValidArticles.map(article => this.renderArticleCard(article)).join('')}
                 </div>
             </div>
         `;

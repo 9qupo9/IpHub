@@ -213,11 +213,11 @@
 
         <script src="Header.js"></script>
         <script src="ValidatorContent.js"></script>
-        <script src="UsefulArticles.js"></script>
+        <script src="ValidatorArticles.js"></script>
         <script>
 
             let validatorContent = null;
-            let usefulArticles = null;
+            let validatorArticles = null;
 
             document.addEventListener('DOMContentLoaded', function () {
 
@@ -234,10 +234,10 @@
                 const usefulArticlesBtn = document.getElementById('useful-articles-btn');
                 if (usefulArticlesBtn) {
                     usefulArticlesBtn.addEventListener('click', function () {
-                        if (!usefulArticles) {
-                            usefulArticles = new UsefulArticles();
+                        if (!validatorArticles) {
+                            validatorArticles = new ValidatorArticles();
                         }
-                        usefulArticles.init();
+                        validatorArticles.init();
                     });
                 }
             });
