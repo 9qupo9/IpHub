@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Hub - IPHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *:not(#header-root *):not(#header-root):not(#info-modal *):not(#info-modal) {
+            font-family: 'Source Code Pro', monospace;
+        }
+
+        #header-root,
+        #header-root *,
+        #info-modal,
+        #info-modal * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                height: 100vh;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+        }
+
+        .radial-gradient-bg {
+            background: #0C0A13;
+            position: relative;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        .star:nth-child(odd) {
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(3n) {
+            animation-delay: 2s;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        #header-root {
+            z-index: 3 !important;
+        }
+
+        #header-root>div {
+            z-index: 3 !important;
+        }
+
+        #info-modal {
+            z-index: 4 !important;
+        }
+
+        #info-modal .modal-content {
+            z-index: 4 !important;
+        }
+
+        #info-modal::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .education-card {
+            background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(34, 197, 94, 0.5);
+            box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+        }
+
+        .gradient-border {
+            background: linear-gradient(135deg, #22C55E, #06B6D4, #3B82F6);
+            padding: 2px;
+            border-radius: 12px;
+        }
+
+        .gradient-border-inner {
+            background: #0C0A13;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+            }
+
+            100% {
+                box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+            }
+        }
+    </style>
+</head>
+
+<body class="radial-gradient-bg text-white">
+    <div id="header-root"></div>
+
+    <div class="stars">
+        <div class="star" style="top: 10%; left: 15%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 20%; left: 80%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 30%; left: 25%; width: 1.5px; height: 1.5px;"></div>
+        <div class="star" style="top: 15%; left: 70%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 45%; left: 10%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 60%; left: 85%; width: 1.5px; height: 1.5px;"></div>
+        <div class="star" style="top: 75%; left: 20%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 85%; left: 75%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 25%; left: 45%; width: 1.5px; height: 1.5px;"></div>
+        <div class="star" style="top: 55%; left: 60%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 35%; left: 90%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 65%; left: 5%; width: 1.5px; height: 1.5px;"></div>
+        <div class="star" style="top: 80%; left: 50%; width: 1px; height: 1px;"></div>
+        <div class="star" style="top: 5%; left: 40%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 90%; left: 30%; width: 1.5px; height: 1.5px;"></div>
+    </div>
+
+    <section
+        class="min-h-screen radial-gradient-bg flex flex-col items-center relative overflow-hidden px-4 pt-32">
+
+        <div class="text-center mb-8 relative z-2">
+            <div class="inline-block mb-6">
+                <h1 class="text-4xl md:text-6xl font-normal text-white mb-0 tracking-tight"
+                    style="font-family: 'Kantumruy', sans-serif;">
+                    Education hub
+                </h1>
+            </div>
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto mb-8"
+                style="font-family: 'Kantumruy', sans-serif;">
+                Learn about Story blockchain technology: comprehensive tutorials, courses, documentation,
+                and educational resources for beginners and advanced users alike.
+            </p>
+        </div>
+
+        <div class="w-full max-w-4xl mb-12 relative z-2">
+            <div class="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
+        </div>
+
+        <div
+            class="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:items-center sm:gap-6 mb-8 relative z-2 max-w-6xl sm:flex-wrap">
+            <img id="getting-started-btn" src="icon/About.png" alt="Getting Started"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="tutorials-guides-btn" src="icon/Video.png" alt="Tutorials & Guides"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="video-courses-btn" src="icon/Tutorial.png" alt="Video Courses"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+            <img id="technical-docs-btn" src="icon/Useful.png" alt="Technical Docs"
+                class="w-auto h-6 sm:h-8 cursor-pointer hover:opacity-80 transition-opacity duration-300 mx-auto">
+        </div>
+
+        <div id="network-info" class="w-full mb-8 relative z-2">
+        </div>
+
+        <div id="main-content" class="w-full relative z-2">
+        </div>
+    </section>
+
+    <script src="Header.js"></script>
+    <script src="EducationArticlesTwo.js"></script>
+    <script>
+        let educationArticlesTwo = null;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            if (!educationArticlesTwo) {
+                educationArticlesTwo = new EducationArticlesTwo();
+            }
+            educationArticlesTwo.init();
+
+            const gettingStartedBtn = document.getElementById('getting-started-btn');
+            if (gettingStartedBtn) {
+                gettingStartedBtn.addEventListener('click', function () {
+                 
+                    window.location.href = 'education-about';
+                });
+            }
+
+            const tutorialsGuidesBtn = document.getElementById('tutorials-guides-btn');
+            if (tutorialsGuidesBtn) {
+                tutorialsGuidesBtn.addEventListener('click', function () {
+                    
+                    window.location.href = 'education-resource';
+                });
+            }
+
+            const videoCoursesBtn = document.getElementById('video-courses-btn');
+            if (videoCoursesBtn) {
+                videoCoursesBtn.addEventListener('click', function () {
+                   
+                    if (!educationArticlesTwo) {
+                        educationArticlesTwo = new EducationArticlesTwo();
+                    }
+                    educationArticlesTwo.init();
+                });
+            }
+
+            const technicalDocsBtn = document.getElementById('technical-docs-btn');
+            if (technicalDocsBtn) {
+                technicalDocsBtn.addEventListener('click', function () {
+                    
+                    window.location.href = 'education-articles';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
