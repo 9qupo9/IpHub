@@ -1715,7 +1715,7 @@ class ValidatorContent {
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">Story Network Services</span>
                         </div>
@@ -2011,7 +2011,7 @@ class ValidatorContent {
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">Story Network Endpoints</span>
                         </div>
@@ -2637,7 +2637,7 @@ class ValidatorContent {
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">Story Network Explorers</span>
                         </div>
