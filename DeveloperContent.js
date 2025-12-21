@@ -215,7 +215,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-lg font-semibold text-white">Story Mainnet Network</h3>
                         </div>
@@ -326,7 +326,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-lg font-semibold text-white">Story Aeneid Testnet</h3>
                         </div>
@@ -548,7 +548,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-lg font-semibold text-white">Story Mainnet Network</h3>
                         </div>
@@ -606,7 +606,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-lg font-semibold text-white">Story Aeneid Testnet</h3>
                         </div>
@@ -666,7 +666,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                         <div class="w-8 h-8 rounded overflow-hidden">
-                            <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                            <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-lg font-semibold text-white">Story Aeneid Testnet</h3>
                     </div>
