@@ -89,26 +89,26 @@ class DeveloperContent {
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
                                 <h4 class="text-sm font-semibold text-white mb-3 underline">General:</h4>
-                                <div class="space-y-2 text-sm">
-                                    <div class="break-words">
-                                        <span class="text-white">• Website:</span>
-                                        <a href="https://www.story.foundation" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-words">https://www.story.foundation</a>
+                                <div class="space-y-2 text-xs sm:text-sm">
+                                    <div class="block">
+                                        <span class="text-white block sm:inline">• Website:</span>
+                                        <a href="https://www.story.foundation" class="text-blue-400 hover:text-blue-300 transition-colors break-all block sm:inline sm:ml-1">https://www.story.foundation</a>
                                     </div>
-                                    <div class="break-words">
-                                        <span class="text-white">• Linktree:</span>
-                                        <a href="https://linktr.ee/storyprotocol" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-words">https://linktr.ee/storyprotocol</a>
+                                    <div class="block">
+                                        <span class="text-white block sm:inline">• Linktree:</span>
+                                        <a href="https://linktr.ee/storyprotocol" class="text-blue-400 hover:text-blue-300 transition-colors break-all block sm:inline sm:ml-1">https://linktr.ee/storyprotocol</a>
                                     </div>
-                                    <div class="break-words">
-                                        <span class="text-white">• LinkedIn:</span>
-                                        <a href="https://www.linkedin.com/company/story-foundation" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-words">https://www.linkedin.com/company/story-foundation</a>
+                                    <div class="block">
+                                        <span class="text-white block sm:inline">• LinkedIn:</span>
+                                        <a href="https://www.linkedin.com/company/story-foundation" class="text-blue-400 hover:text-blue-300 transition-colors break-all block sm:inline sm:ml-1">https://www.linkedin.com/company/story-foundation</a>
                                     </div>
-                                    <div class="break-words">
-                                        <span class="text-white">• Youtube:</span>
-                                        <a href="https://www.youtube.com/@StoryProt" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-words">https://www.youtube.com/@StoryProt</a>
+                                    <div class="block">
+                                        <span class="text-white block sm:inline">• Youtube:</span>
+                                        <a href="https://www.youtube.com/@StoryProt" class="text-blue-400 hover:text-blue-300 transition-colors break-all block sm:inline sm:ml-1">https://www.youtube.com/@StoryProt</a>
                                     </div>
-                                    <div class="break-words">
-                                        <span class="text-white">• Blog:</span>
-                                        <a href="https://www.story.foundation/blog" class="text-blue-400 hover:text-blue-300 transition-colors ml-1 break-words">https://www.story.foundation/blog</a>
+                                    <div class="block">
+                                        <span class="text-white block sm:inline">• Blog:</span>
+                                        <a href="https://www.story.foundation/blog" class="text-blue-400 hover:text-blue-300 transition-colors break-all block sm:inline sm:ml-1">https://www.story.foundation/blog</a>
                                     </div>
                                 </div>
 
@@ -215,7 +215,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-lg font-semibold text-white">Story Mainnet Network</h3>
                         </div>
@@ -326,7 +326,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-lg font-semibold text-white">Story Aeneid Testnet</h3>
                         </div>
@@ -548,7 +548,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-lg font-semibold text-white">Story Mainnet Network</h3>
                         </div>
@@ -606,7 +606,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-lg font-semibold text-white">Story Aeneid Testnet</h3>
                         </div>
@@ -666,7 +666,7 @@ class DeveloperContent {
                     <div class="developer bg-transparent p-6 mb-6" style="font-family: 'Source Code Pro', monospace;">
                         <div class="flex items-center gap-3 mb-6">
                         <div class="w-8 h-8 rounded overflow-hidden">
-                            <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                            <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-lg font-semibold text-white">Story Aeneid Testnet</h3>
                     </div>

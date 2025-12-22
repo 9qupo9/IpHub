@@ -161,6 +161,25 @@
                 box-shadow: 0 0 30px rgba(236, 72, 153, 0.6);
             }
         }
+
+        /* Mobile-specific styles for better text wrapping */
+        @media (max-width: 640px) {
+            .break-all {
+                word-break: break-all;
+                overflow-wrap: break-word;
+            }
+            
+            .line-clamp-3 {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            
+            .community-card {
+                margin-bottom: 1rem;
+            }
+        }
     </style>
 </head>
 

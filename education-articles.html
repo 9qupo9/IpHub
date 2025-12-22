@@ -154,6 +154,20 @@
                 box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
             }
         }
+
+        /* Mobile-specific styles for better card layout */
+        @media (max-width: 640px) {
+            .education-card {
+                margin-bottom: 1rem;
+            }
+            
+            .line-clamp-3 {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
     </style>
 </head>
 

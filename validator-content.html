@@ -154,6 +154,25 @@
                 box-shadow: 0 0 30px rgba(147, 51, 234, 0.6);
             }
         }
+
+        /* Mobile-specific styles for better card layout and link wrapping */
+        @media (max-width: 640px) {
+            .validator-card {
+                padding: 1rem !important;
+            }
+            
+            .break-all {
+                word-break: break-all;
+                overflow-wrap: break-word;
+            }
+            
+            .line-clamp-3 {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
     </style>
 </head>
 

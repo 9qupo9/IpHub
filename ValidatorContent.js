@@ -39,7 +39,7 @@ class ValidatorContent {
                     `).join('')}
                 </div>
                 
-                <!-- Search Input Field -->
+            
                 <div class="mb-6 relative">
                     <div class="relative inline-block">
                         <input 
@@ -79,12 +79,12 @@ class ValidatorContent {
 
         const searchInput = document.getElementById('moniker-search');
         if (searchInput) {
-            // Handle search input
+            
             searchInput.addEventListener('input', (e) => {
                 this.handleSearch(e.target.value);
             });
 
-            // Handle keyboard shortcuts
+           
             searchInput.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     e.target.value = '';
@@ -93,7 +93,7 @@ class ValidatorContent {
                 }
             });
 
-            // Handle focus/blur for better UX
+           
             searchInput.addEventListener('focus', (e) => {
                 e.target.style.borderColor = 'rgba(147, 51, 234, 0.8)';
             });
@@ -115,7 +115,6 @@ class ValidatorContent {
             button.style.cssText = "background-image: url('media/ramp.svg'); background-size: 100% 100%; background-repeat: no-repeat; font-family: 'Source Code Pro', monospace; font-size: 10.71px;";
         });
 
-        // Clear search input when switching tabs
         const searchInput = document.getElementById('moniker-search');
         if (searchInput) {
             searchInput.value = '';
@@ -129,7 +128,6 @@ class ValidatorContent {
         const unifiedContainer = document.getElementById('unified-content-container');
         if (!unifiedContainer) return;
 
-        // Remove search results info when updating content
         const existingInfo = document.querySelector('.search-results-info');
         if (existingInfo) {
             existingInfo.remove();
@@ -1715,7 +1713,7 @@ class ValidatorContent {
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">Story Network Services</span>
                         </div>
@@ -2011,7 +2009,7 @@ class ValidatorContent {
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">Story Network Endpoints</span>
                         </div>
@@ -2637,7 +2635,7 @@ class ValidatorContent {
                     <div class="validator-card bg-transparent p-6 mb-6">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="w-8 h-8 rounded overflow-hidden">
-                                <img src="https://pbs.twimg.com/profile_images/1820303986349805569/MKfPfLtz_400x400.jpg" alt="Story" class="w-full h-full object-cover">
+                                <img src="https://pbs.twimg.com/profile_images/1999628458800861186/ZU_lIdNS_400x400.jpg" alt="Story" class="w-full h-full object-cover">
                             </div>
                             <span class="text-white font-semibold text-lg">Story Network Explorers</span>
                         </div>
@@ -2948,7 +2946,6 @@ class ValidatorContent {
         const cards = container.querySelectorAll('.validator-card');
         let visibleCount = 0;
 
-        // Clear previous highlights
         cards.forEach(card => {
             this.clearHighlights(card);
         });
@@ -2957,7 +2954,6 @@ class ValidatorContent {
             const cardText = card.textContent.toLowerCase();
             const cardTitle = card.querySelector('.text-lg')?.textContent.toLowerCase() || '';
 
-            // Enhanced search: check title, service names, URLs, and general content
             const shouldShow = cardText.includes(searchLower) ||
                 cardTitle.includes(searchLower) ||
                 this.searchInLinks(card, searchLower);
@@ -2973,7 +2969,6 @@ class ValidatorContent {
             }
         });
 
-        // Show search results info
         this.showSearchResults(visibleCount, query, activeTab);
 
         console.log(`Found ${visibleCount} results for: "${query}" in ${activeTab} tab`);
@@ -2988,7 +2983,6 @@ class ValidatorContent {
     }
 
     showSearchResults(count, query, tab) {
-        // Remove existing search info
         const existingInfo = document.querySelector('.search-results-info');
         if (existingInfo) {
             existingInfo.remove();
@@ -3031,7 +3025,7 @@ class ValidatorContent {
 
         textNodes.forEach(textNode => {
             const parent = textNode.parentNode;
-            if (parent.tagName === 'MARK') return; // Already highlighted
+            if (parent.tagName === 'MARK') return; 
 
             const text = textNode.nodeValue;
             const regex = new RegExp(`(${searchTerm})`, 'gi');

@@ -161,6 +161,18 @@
                 box-shadow: 0 0 30px rgba(236, 72, 153, 0.6);
             }
         }
+
+        /* Mobile-specific styles for better text wrapping */
+        @media (max-width: 640px) {
+            .break-all {
+                word-break: break-all;
+                overflow-wrap: break-word;
+            }
+            
+            .developer {
+                padding: 1rem !important;
+            }
+        }
     </style>
 </head>
 

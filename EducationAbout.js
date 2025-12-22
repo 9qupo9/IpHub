@@ -635,7 +635,7 @@ class EducationAbout {
         const exploreBtn = document.getElementById('explore-story-btn');
         if (exploreBtn) {
             exploreBtn.addEventListener('click', function () {
-                window.location.href = '/community';
+                window.location.href = '/community-content';
             });
         }
 

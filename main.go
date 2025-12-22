@@ -55,6 +55,11 @@ func main() {
 		http.ServeFile(отвечающий, запрос, "EducationAbout.js")
 	})
 	
+	серв.HandleFunc("/EducationAboutMobile.js", func(отвечающий http.ResponseWriter, запрос *http.Request) {
+		отвечающий.Header().Set("Content-Type", "application/javascript")
+		http.ServeFile(отвечающий, запрос, "EducationAboutMobile.js")
+	})
+	
 	серв.HandleFunc("/EducationArticles.js", func(отвечающий http.ResponseWriter, запрос *http.Request) {
 		отвечающий.Header().Set("Content-Type", "application/javascript")
 		http.ServeFile(отвечающий, запрос, "EducationArticles.js")
@@ -178,4 +183,5 @@ func main() {
 	})
 
 	http.ListenAndServe(":8080", серв)
+
 }
